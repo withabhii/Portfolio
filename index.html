@@ -1501,7 +1501,9 @@
         }
 
         .toast.error {
-            border-left-color: var(--primary-medium);
+            background: red;
+            border-left-color: var(--bg-medium);
+            color:var(--text-lightest);
         }
 
         .toast i {
@@ -3022,7 +3024,7 @@
 
                 setTimeout(() => {
                     toast.classList.remove('show');
-                }, 5000);
+                }, 3000);
             }
 
             // Contact form submission
