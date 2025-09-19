@@ -565,15 +565,18 @@
             display: inline-block;
             position: relative;
             padding-left: 60px;
+            background: rgba(252, 225, 129, 0.2);
+            padding: 10px 20px 10px 60px;
+            border-radius: 30px;
         }
 
         .hero .title::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            width: 50px;
+            width: 30px;
             height: 2px;
             background: var(--primary-dark);
         }
@@ -666,6 +669,7 @@
             background: var(--primary-accent);
             transition: all 0.3s ease;
             z-index: -1;
+            border-radius: 50px;
         }
 
         .btn-primary:hover::before {
@@ -1009,6 +1013,8 @@
         .about-image:hover::before {
             top: 0;
             left: 0;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
         }
 
         .about-image img {
@@ -1073,6 +1079,8 @@
             position: relative;
             padding-bottom: 20px;
             margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
         }
 
         .info-item:last-child {
@@ -1084,7 +1092,7 @@
             content: '';
             position: absolute;
             left: -30px;
-            top: 5px;
+            top: 12px;
             width: 12px;
             height: 12px;
             border-radius: 50%;
@@ -1105,6 +1113,7 @@
             font-size: 1.2rem;
             transition: all 0.3s ease;
             border: 1px solid rgba(2, 102, 112, 0.2);
+            flex-shrink: 0;
         }
 
         .info-item:hover i {
@@ -1177,7 +1186,7 @@
 
         .timeline-content {
             width: calc(50% - 40px);
-            padding: 20px;
+            padding: 25px;
             background: var(--bg-lightest);
             border-radius: 10px;
             box-shadow: var(--shadow-sm);
@@ -1219,13 +1228,14 @@
             position: absolute;
             top: 0;
             width: 120px;
-            padding: 5px 10px;
+            padding: 8px 15px;
             background: var(--gradient-accent);
             color: var(--text-darkest);
             border-radius: 20px;
             text-align: center;
             font-weight: 600;
             font-size: 0.8rem;
+            box-shadow: var(--shadow-sm);
         }
 
         .timeline-item:nth-child(odd) .timeline-date {
@@ -1245,6 +1255,22 @@
         .timeline-description {
             color: var(--text-dark);
             font-size: 0.95rem;
+        }
+
+        .timeline-badge {
+            display: inline-block;
+            background: rgba(6, 104, 47, 0.1);
+            color: var(--primary-dark);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Professional Experience Section */
+        .experience-container {
+            margin-top: 80px;
         }
 
         /* Contact Section */
@@ -2498,9 +2524,9 @@
                 <div class="about-content">
                     <div class="about-text">
                         <h2>Building Digital Excellence</h2>
-                        <p>Hi, I'm Abhishek Mahapatra, a passionate FullStack-Web Developer with 3 Months of
-                            experience crafting beautiful, functional digital experiences. I specialize in
-                            React, JavaScript, Node.js,Php,Laravel,MySql etc. and love turning complex problems into
+                        <p>Hi, I'm Abhishek Mahapatra, a passionate FullStack-Web Developer with 7 months of
+                            professional experience crafting beautiful, functional digital experiences. I specialize in
+                            React, JavaScript, Node.js, PHP, Laravel, MySQL and more, and love turning complex problems into
                             elegant solutions.</p>
                         <p>My approach combines technical expertise with creative problem-solving. I believe in writing
                             clean, maintainable code while staying at the forefront of emerging technologies to deliver
@@ -2545,7 +2571,7 @@
                             <i class="fas fa-briefcase"></i>
                             <div>
                                 <div class="info-label">Experience</div>
-                                <div class="info-value">3 Months</div>
+                                <div class="info-value">7 Months</div>
                             </div>
                         </div>
                         <div class="info-item">
@@ -2578,35 +2604,68 @@
     <section class="education section" id="education">
         <div class="container">
             <div class="section-title">
-                <h2>Education & Certifications</h2>
-                <p>My academic background and professional certifications</p>
+                <h2>Education & Experience</h2>
+                <p>My academic background and professional journey</p>
             </div>
             <div class="education-container">
                 <div class="timeline">
+                    <!-- Current Education -->
                     <div class="timeline-item">
+                        <div class="timeline-date">2024 - Present</div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2022 - 2025</div>
+                            <h3 class="timeline-title">Master of Computer Applications (MCA)</h3>
+                            <p class="timeline-description">Veer Narmad South Gujarat University, Surat<br>
+                                Currently pursuing advanced studies in computer applications with focus on software development, 
+                                data structures, algorithms, and emerging technologies.
+                            </p>
+                            <span class="timeline-badge">In Progress</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Professional Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 - Present</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Full Stack Developer</h3>
+                            <p class="timeline-description">Professional Experience<br>
+                                Developed and maintained full-stack web applications using modern technologies including 
+                                React, Node.js, PHP, Laravel, and various databases. Collaborated with cross-functional teams 
+                                to deliver high-quality software solutions.
+                            </p>
+                            <span class="timeline-badge">7 Months Experience</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Previous Education -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2025</div>
+                        <div class="timeline-content">
                             <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
-                            <p class="timeline-description">Veer Narmad South Gujarat University,
-                                Surat<br>Specialization in Fullstack-Web Development and Database Systems.</p>
+                            <p class="timeline-description">Veer Narmad South Gujarat University, Surat<br>
+                                Specialization in Fullstack-Web Development and Database Systems. 
+                                Graduated with distinction and hands-on experience in various programming languages and frameworks.
+                            </p>
+                            <span class="timeline-badge">Completed</span>
                         </div>
                     </div>
+                    
                     <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2023</div>
                             <h3 class="timeline-title">Self-Learning & Projects</h3>
-                            <p class="timeline-description">Actively engaged in online learnings (Udemy,
-                                freeCodeCamp, Youtube) and personal projects focusing on MERN stack, Python/Django, .Net
-                                Framework, Php and cloud
-                                fundamentals.</p>
+                            <p class="timeline-description">Actively engaged in online learning (Udemy, freeCodeCamp, YouTube) 
+                                and personal projects focusing on MERN stack, Python/Django, .Net Framework, PHP and cloud fundamentals.
+                            </p>
                         </div>
                     </div>
+                    
                     <div class="timeline-item">
+                        <div class="timeline-date">2020-2022</div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2020-2022</div>
                             <h3 class="timeline-title">Higher Secondary Education</h3>
-                            <p class="timeline-description">Gujarat Higher Secondary Education Board<br>Commerce
-                                Stream with Mathematics.</p>
+                            <p class="timeline-description">Gujarat Higher Secondary Education Board<br>
+                                Commerce Stream with Mathematics. Developed strong analytical and problem-solving skills.
+                            </p>
                         </div>
                     </div>
                 </div>
